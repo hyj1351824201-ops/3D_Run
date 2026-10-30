@@ -16,7 +16,50 @@
     <meta name="force-rendering" content="webkit"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 
-    <link rel="stylesheet" type="text/css" href="./style.css"/>
+    <!-- 样式直接写在页面里，避免部署后浏览器缓存旧的 style.css 导致样式和页面对不上 -->
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: #000;
+        cursor: default;
+        font-family: Helvetica, Verdana, Arial, sans-serif;
+      }
+
+      body, canvas, div {
+        outline: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        -khtml-user-select: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+
+      canvas {
+        background-color: rgba(0, 0, 0, 0);
+      }
+
+      /* 铺满整个浏览器窗口，去掉默认模板的黑边框和阴影 */
+      #GameDiv {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      #Cocos3dGameContainer, #GameCanvas {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
     <link rel="icon" href="favicon.ico"/>
   </head>
   <body>
