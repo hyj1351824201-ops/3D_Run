@@ -63,7 +63,8 @@
     <link rel="icon" href="favicon.ico"/>
   </head>
   <body>
-    <!-- cc_exact_fit_screen="true" 让引擎用浏览器窗口大小当画布大小，并监听 resize，和 web-mobile 模板一致 -->
+    <!-- 注意：引擎 3.8.8 不读这个 cc_exact_fit_screen 属性，真正生效的是同目录 application.js 里的
+         overrideSettings.screen.exactFitScreen = true（让引擎跟随窗口大小重建画布）。属性保留只是为了和官方模板一致 -->
     <div id="GameDiv" cc_exact_fit_screen="true">
       <div id="Cocos3dGameContainer">
         <canvas id="GameCanvas" tabindex="99"></canvas>
