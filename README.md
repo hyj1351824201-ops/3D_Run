@@ -8,8 +8,7 @@
 
 ## 部署
 
-在源码工程执行 Cocos 构建（web-desktop），再把 `build/web-desktop/` 的内容
-推送到本仓库 `main` 分支根目录。
+本仓库内容由源码工程的 `deploy.sh` 自动推送，请勿手工修改。
 
-`.nojekyll` 必须保留，否则 GitHub Pages 会用 Jekyll 处理，下划线开头的
-目录和文件会被忽略。
+`.nojekyll` 必须保留，否则 GitHub Pages 会启用 Jekyll 处理，
+Cocos 产物里下划线开头的文件和目录会被忽略，页面白屏。
